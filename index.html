@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>触动中间的立方体有不一样的效果哦</title>
+</head>
+
+<body>
+    <audio autoplay="autoplay" controls="controls" loop="loop" preload="auto" src="./天外来物.mp3"></audio>
+    <style>
+        body {
+            perspective: 1100px;
+        }
+        .father {
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            position: relative;
+            transform-style: preserve-3d;  
+            animation: move 4s linear infinite;
+            transform: rotateX(25deg);  
+        }
+        @keyframes move {
+            0% {    
+                transform: rotateX(25deg) rotateY(0);  
+            }
+            100% {
+                transform: rotateX(25deg) rotateY(360deg);
+            }
+        }
+        .a1{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 50px;
+            left: 30px;
+            transform-style: preserve-3d;
+            
+        }
+        .a1 div{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            /* background: url(a1.jpg) 0 0/100% 100%; */
+        }
+       .a2 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: -20px;
+            left: 0;
+            transform-style: preserve-3d;
+            
+        }
+        .a2 div {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-style: preserve-3d;
+           /*  background: url(a2.jpg) 0 0/100% 100%; */
+        }
+        .father .a1 .son1
+        {
+            transform: translateZ(50px);
+            background: url(1.jpg) 0 0/100% 100%;
+        }
+        .father .a1 .son2 {
+            transform: rotateY(90deg) translateZ(50px);
+            background: url(2.jpg) 0 0/100% 100%;
+        }
+        .father .a1 .son3 {
+            transform: rotateY(180deg) translateZ(50px);
+            background: url(9.jpg) 0 0/100% 100%;
+        }
+        .father .a1 .son4{
+            transform: rotateY(270deg) translateZ(50px);
+            background: url(4.jpg) 0 0/100% 100%;
+        }
+        .father .a1 .son5{
+            transform: rotateX(90deg) translateZ(50px);
+            background: url(6.jpg) 0 0/100% 100%;
+        }
+        .father .a1 .son6{
+            transform: rotateX(-90deg) translateZ(50px);
+            background: url(5.jpg) 0 0/100% 100%;
+        }
+        .father .a2 .son11{
+            transform: translateZ(100px);
+            opacity: 0.2;
+            transition: all 3s;
+            background: url(12.jpg) 0 0/100% 100%;
+        } 
+        .father .a2 .son22 {
+            transform: rotateY(90deg) translateZ(100px);
+            opacity: 0.2;
+            transition: all 3s;
+            background: url(8.jpg) 0 0/100% 100%;
+        }
+        .father .a2 .son33 {
+            transform: rotateY(180deg) translateZ(100px);
+            opacity: 0.2;
+            transition: all 3s;
+            background: url(3.jpg) 0 0/100% 100%;
+        }
+        .father .a2 .son44{
+            transform: rotateY(270deg) translateZ(100px);
+            opacity: 0.2;
+            transition: all 3s;
+            background: url(10.jpg) 0 0/100% 100%;
+        }
+        .father .a2 .son55{
+            transform: rotateX(90deg) translateZ(100px);
+            opacity: 0.2;
+            transition: all 3s;
+            background: url(11.jpg) 0 0/100% 100%;
+        }
+        .father .a2 .son66{
+            transform: rotateX(-90deg) translateZ(100px);
+            opacity: 0.2;
+            transition: all 3s;
+            background: url(7.jpg) 0 0/100% 100%;
+        }
+        .father:hover .son11{
+            transform:  translateZ(200px);
+            opacity: 0.8;
+        }
+        .father:hover .son22{
+            transform: rotateY(90deg) translateZ(200px);
+            opacity: 0.8;
+        }
+        .father:hover .son33{
+            transform: rotateY(180deg) translateZ(200px);
+            opacity: 0.8;
+        }
+        .father:hover .son44{
+            transform: rotateY(270deg) translateZ(200px);
+            opacity: 0.8;
+        }
+        .father:hover .son55{
+            transform: rotateX(90deg) translateZ(200px);
+            opacity: 0.8;
+        }
+        .father:hover .son66{
+            transform: rotateX(-90deg) translateZ(200px);
+            opacity: 0.8;
+        }
+    </style>
+    
+    <div class="father">
+        <div class="a1">
+            <div class="son1"></div>
+            <div class="son2"></div>
+            <div class="son3"></div>
+            <div class="son4"></div>
+            <div class="son5"></div>
+            <div class="son6"></div>
+        </div>
+        <div class="a2">
+            <div class="son11"></div>
+            <div class="son22"></div>
+            <div class="son33"></div>
+            <div class="son44"></div>
+            <div class="son55"></div>
+            <div class="son66"></div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
